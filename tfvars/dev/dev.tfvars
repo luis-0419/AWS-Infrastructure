@@ -1,0 +1,6 @@
+intances_name       = "agent"
+environment_name    = "DEV"
+numbers_instances   = "2"
+virtualization_type = "hvm"
+root_device_name    = "/dev/xvda"
+imds_support        = "v2.0"
