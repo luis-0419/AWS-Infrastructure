@@ -16,6 +16,10 @@ terraform {
   }
 }
 
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
 module "ec2_intances" {
   source              = "./modules/ec2_intances"
   name                = var.intances_name
@@ -28,7 +32,11 @@ module "ec2_intances" {
 
 module "vpc" {
   source = "./modules/vpc"
-  name   = vpc_name 
+  name   = var.vpc_name
+
+  subnets = [
+    
+  ]
 }
 
 

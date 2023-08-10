@@ -25,3 +25,7 @@ variable "imds_support" {
 variable "snapshot_id" {
   type = string
 }
+
+variable "snet_cidr_block" {
+  default = "10.0.1.0/24"
+}
